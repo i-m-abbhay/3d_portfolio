@@ -5,6 +5,7 @@ import Island from "../models/Island";
 import Sky from "../models/Sky";
 import Bird from "../models/Bird";
 import Plane from "../models/Plane";
+import HomeInfo from "../components/HomeInfo";
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -45,7 +46,7 @@ const Home = () => {
   return (
     <section className="w-full h-screen relative">
       <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
-        Popup
+        {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
       <Canvas
         className={`w-full h-full bg-transparent ${
@@ -60,7 +61,7 @@ const Home = () => {
           {/* <spotLight /> we do not need it in this case */}
           <hemisphereLight skyColor="#b1e1ff" groundColor="#000000" />
           <Bird />
-          <Sky />
+          <Sky isRotating={isRotating} />
           <Island
             position={islandPosition}
             scale={islandScale}
