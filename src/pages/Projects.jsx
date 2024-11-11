@@ -22,7 +22,14 @@ const Projects = () => {
           enhancements. Your Collaboration is highly valued!
         </p>
       </div>
-      <div className="flex flex-wrap my-20 gap-16">
+       <h1 className="head-text">
+        This section is still under development :(. For the time being, Please Visit My{" "}
+        <a href="https://github.com/i-m-abbhay" ><span className="blue-gradient_text font-semibold drop-shadow">
+          Github Profile
+        </span></a>
+         for projects.
+      </h1>
+{/*       <div className="flex flex-wrap my-20 gap-16">
         {projects.map((project) => (
           <div className="lg:w-[400px] w-full" key={project.name}>
             <div className="block-container w-12 h-12">
@@ -59,7 +66,7 @@ const Projects = () => {
             </div>
           </div>
         ))}
-      </div>
+      </div> */}
       <hr className="border-slate-200" />
       <CTA />
     </section>
